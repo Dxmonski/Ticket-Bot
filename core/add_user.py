@@ -22,7 +22,7 @@ class AskModal(Modal):
         user = interaction.guild.get_member(user_id)
         
         if user is None:
-            print(f"User with ID {user_id} not found.")
+            await interaction.followup.send("User not found.")
             return
         
         overwrites = chnl.overwrites
