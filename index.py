@@ -41,13 +41,14 @@ async def save_tickets(ticket_ids):
 
 @bot.slash_command()
 async def panel(ctx):
+    utils = Utilies(bot)
+    await utils.id_check(ctx)
     embed = discord.Embed(
         title='',
         description=f"{data.ticket_em} |  **__ZRX Tickets__**\n\n__**How to open a ticket**__\n\n> There's a button assigned to this embed, once you press on it you will be forwarded a selectoption, where you can choose what you are opening a ticket for. Once you choose your option, it will make a new ticket for you, there you can chat and place your order.\n\n__**Format**__\n\n> When you open a ticket please give us detailed information about what you want to order. For example: `1x Sniper Key - payment: LTC`",
         color=15134443,
         timestamp=datetime.now()
     )
-    utils = Utilies(bot)
     view = OpenButton()
     msg = await ctx.send(embed=embed, view=view)
     await ctx.respond('Successfully sent panel!', ephemeral=True)
