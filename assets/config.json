@@ -1,0 +1,46 @@
+{
+    "bot": {
+        "token": "",
+        "owner_role_id": "",
+        "guild_id": ""
+    },
+    "categories": {
+        "category_id-1": "",
+        "category_id-2": "",
+        "category_id-3": "",
+        "logs_channel": "",
+        "blocked_role": "",
+        "channel_id": "",
+        "message_id": ""
+    },
+    "embed": {
+        "embed_thumnail_url": "",
+        "embed_footer": "",
+        "loading_response_emoji": "",
+        "success_response_emoji": "",
+        "failed_response_emoji": "",
+        "ticket-embed_emoji": ""
+    },
+    "owners": {
+        "owner_ids": [
+            ""
+        ]
+    },
+    "payments": {
+        "ltc": "",
+        "btc": "",
+        "sol": "",
+        "eth": ""
+    },
+    "select_menu": {
+        "option-1_name": "",
+        "option-2_name": "",
+        "option-3_name": "",
+        "option-1_description": "",
+        "option-2_description": "",
+        "option-3_description": "",
+        "option-1_emoji": "",
+        "option-2_emoji": "",
+        "option-3_emoji": ""
+    }
+}
