@@ -52,7 +52,6 @@ async def panel(ctx):
     view = OpenButton()
     msg = await ctx.send(embed=embed, view=view)
     await ctx.respond('Successfully sent panel!', ephemeral=True)
-    await utils.save_ids(msg.id, ctx.channel.id)
 
 class OpenButton(discord.ui.View):
     def __init__(self):
