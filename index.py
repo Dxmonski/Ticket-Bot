@@ -81,11 +81,11 @@ class SendQuestion(discord.ui.View):
         db = load_tickets()
         response = discord.Embed(title='', description=f'{data.load_em} | Please wait while we process your ticket.')
         msg = await interaction.followup.send(embed=response, ephemeral=True)
-        if any(ticket.get('author') == interaction.user.id for ticket in db.values()):
-            response.description = f'{data.failed_em} | You already have an open ticket.'
+        if str(interaction.user.id) in db.keys() or any(ticket.get('author') == interaction.user.id for ticket in db.values()):
+            response.description = f'<:redx:1109176029504884808> | You already have an open ticket.'
             await msg.edit(embed=response)
             return
-
+        
         guild = interaction.guild
         category = guild.get_channel(int(category_id))
         owner = guild.get_role(int(data.owner))
